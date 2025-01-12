@@ -1,7 +1,7 @@
 ---
 title: "R Tutorial"
-author: "Andie Creel for Nature as Capital"
-date: "January 25, 2023"
+author: "Mariam Gedenidze"
+date: "January 12, 2025"
 output: pdf_document
 urlcolor: blue
 ---
@@ -10,7 +10,7 @@ urlcolor: blue
 knitr::opts_chunk$set(echo = TRUE)
 rm(list=ls())
 ```
-Special thanks to a previous Nature as Capital TF who wrote an R Tutorial in 2018 that heavily influenced this.  
+Special thanks to a Andie Creel and previous Nature as Capital TF whose R Tutorial's inspired this version.
 
 
 # Goal
@@ -104,7 +104,11 @@ myDF$nonsense <- myDF$age_yr + myDF$weight_lb
 
 ```
 
-For the most part, you’ll be loading new data in as tables, but you might have to create one at some point. By looking at how they’re created, we can get a better sense of what goes into them.
+Another useful package for working with Tables (DataFrames) in R is dplyr, as part of package tidyverse. You can install dplyr directly (install.packages("dplyr")), or by installing tidyverse package install.packages("tidyverse").
+Once you install it, explore the functionality of %>% i.e. pipe operator.
+
+Tables:
+You will process data mostly in the table format. For the most part, you’ll be loading new data in as tables, for example by reading/importing .CSV, or .xlsx into the R document. Before I explain this, let's first explore how you can create on your own. By looking at how they’re created, we can get a better sense of what goes into them.
 
 ```{r, results='hide'}
 # Create the data frame
@@ -129,6 +133,23 @@ BMI[1,3] # version 2
 
 
 ```
+Importing tables
+
+You can import data as a table from your device, by reading the file. Common files that hold such data are .csv and .xlxs. 
+
+```{r, results='hide'}
+
+my_data <- read.csv("Path to the .csv file on your computer") #reading a csv file
+
+For excel document, you first install a package:
+install.packages("readxl")
+library(readxl) # load the library
+ 
+my_data2 <- read_excel('"Path to the .xlsx file on your computer") #reading an .xlxs file 
+
+```
+There are also built-in  datasets on R environment. Accessing them is very simple and these datasets are often used in tutorials. 
+Visit this website for directions on importing them: https://www.sthda.com/english/wiki/r-built-in-data-sets 
 
 
 ## Functions, loops, and if statement
