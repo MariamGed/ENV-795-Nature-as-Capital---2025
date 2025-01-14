@@ -4,4 +4,4 @@ I organise my notes and materials for the Nature as Capital class as a Teaching 
 Review Materials
 
 1. Excel Solver example
-2. R Tutorial: r_tutorial.Rmd
+2. [R Tutorial:] (r_tutorial.Rmd)
